@@ -3,6 +3,8 @@ package com.tensquare.article.service;
 import com.tensquare.article.dao.ArticleDao;
 import com.tensquare.article.pojo.Article;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -11,6 +13,8 @@ import java.util.List;
  * User: HC
  * Date: 2020-04-03-23:51
  */
+@Transactional
+@Service
 public class ArticleService {
     @Autowired
     private ArticleDao articleDao;
